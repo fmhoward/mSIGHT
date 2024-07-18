@@ -1,0 +1,36 @@
+#####
+name: CycleGan
+
+size: 512
+input_nc: 3         
+output_nc: 6
+
+bidirect: True #Unidirectional or bidirectional
+regist: False    # With or without registration network
+
+
+save_root: ""
+image_save: ""
+model_save: ""
+eval_save: ""
+tilesdir: ""
+valdir: ""
+port: 6004
+
+# lamda weight
+Adv_lamda: 1
+Cyc_lamda: 10
+Corr_lamda: 20
+Smooth_lamda: 10
+
+
+epoch: 0 
+n_epochs: 35      
+weight_epoch: 35   
+batchSize: 8 
+
+lr: 0.0001                   # initial learning rate
+               
+cuda: True                
+n_cpu: 8
+

@@ -1,0 +1,30 @@
+#####
+name: P2p
+
+size: 512
+input_nc: 3         
+output_nc: 6
+
+save_root: ""
+image_save: ""
+model_save: ""
+tilesdir: ""
+valdir: ""
+port: 6004
+
+
+Adv_lamda: 1
+P2P_lamda: 100
+
+
+epoch: 0 
+n_epochs: 35 
+weight_epoch: 35   
+batchSize: 8 
+
+lr: 0.0001                   # initial learning rate
+decay_epoch: 20            # epoch to start linearly decaying the learning rate to 0
+                
+cuda: True                
+n_cpu: 8
+

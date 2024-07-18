@@ -1,0 +1,39 @@
+#####
+
+
+size: 512
+input_nc: 3 
+batchSize: 8
+
+
+name: RegGan
+output_nc: 6
+save_root: ""
+image_save: ""
+model_save: ""
+eval_save: ""
+tilesdir: ""
+valdir: '""
+
+
+port: 6006
+
+epoch: 0 
+n_epochs: 35
+weight_epoch: 35
+n_cpu: 8
+
+bidirect: False 
+regist: True 
+
+
+Adv_lamda: 1
+Smooth_lamda: 10
+Corr_lamda: 20 
+# Cyc_lamda: 10
+
+lr: 0.0001                   # initial learning rate
+                 
+cuda: True               
+
+
