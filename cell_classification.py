@@ -11,7 +11,7 @@ from sklearn.mixture import GaussianMixture
 from sklearn.ensemble import RandomForestClassifier
 
 
-def stats_(img_dir, cellpose_mask_dir, savedir, channels, njobs=16):
+def cell_metrics(img_dir, cellpose_mask_dir, savedir, channels, njobs=16):
     '''
     Calculate volume of pixel intensity for each cell.
     '''
@@ -51,10 +51,7 @@ def stats_single(mask_fpath, img_fpaths, savedir, fout):
     
     # parameters
     sigma = 13
-    if 'he_seg' in mask_fpath:
-        dilation_size = 1
-    else:
-        dilation_size = 2
+    dilation_size = 2 # 1 for cell segmentation, 2 for nuclei
     kernel = np.ones((2*dilation_size+1, 2*dilation_size+1))
 
     # calculation per cell
@@ -98,6 +95,7 @@ def stats_single(mask_fpath, img_fpaths, savedir, fout):
 def cluster(df, method, n_clusters=5, eps=0.5, min_samples=5):
     '''
     Clustering of ground truth cells using volume and standard deviation of pixel intensity.
+    Labels needs to be manually asigned to each cluster.
     '''
     if method == 'kmeans':
         model = KMeans(n_clusters=n_clusters, random_state=56)
