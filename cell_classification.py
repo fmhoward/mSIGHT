@@ -14,6 +14,7 @@ from sklearn.ensemble import RandomForestClassifier
 def cell_metrics(img_dir, cellpose_mask_dir, savedir, channels, njobs=16):
     '''
     Calculate volume of pixel intensity for each cell.
+    This implementation is parallelized for speed.
     '''
     if not exists(savedir):
         os.makedirs(savedir, exist_ok=True)

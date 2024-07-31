@@ -1,0 +1,8 @@
+{
+ "MyDataset": {
+  "slides": "/path/to/slides",
+  "roi": "/path/to/ROIs/if/available",
+  "tiles": "/path/to/save/png/jpg/image/tiles",
+  "tfrecords": "/path/to/save/tfrecords/tiles"
+ }
+}

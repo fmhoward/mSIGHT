@@ -10,10 +10,10 @@ name: RegGan
 output_nc: 6
 save_root: ""
 image_save: ""
-model_save: ""
+model_save: "/paths/to/model_weights"
 eval_save: ""
 tilesdir: ""
-valdir: '""
+valdir: ""
 
 
 port: 6006

@@ -10,7 +10,7 @@ from concurrent.futures import ProcessPoolExecutor
 from scipy.stats import gaussian_kde
 import plotly.graph_objects as go
 
-def find_adjacent(df_path, outpath, channels, distance=19.69, ):
+def find_adjacent(df_path, outpath, channels, distance=19.69):
     '''
     For each cell within a tile, find if the cell is adjacent to cells of a different type.
     '''

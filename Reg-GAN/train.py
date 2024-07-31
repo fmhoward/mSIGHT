@@ -22,7 +22,7 @@ def main():
     elif config['name'] == 'P2p':
         trainer = P2p_Trainer(config)
 
-    trainer.train()
+    # trainer.train()
     trainer.evaluate('/path/to/input/*.png', '/path/to/output')
 
 ###################################
