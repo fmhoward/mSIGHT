@@ -6,6 +6,9 @@ registered_slide_dst_dir = "/path/to/registered/slides"
 reference_slide = "wsi_ref.tiff"
 
 def register(size=1024):
+    '''
+    Register a series or a pair of WSIs.
+    '''
     registrar = registration.Valis( slide_src_dir, 
                                     results_dst_dir, 
                                     reference_img_f='HE_ref.tiff',

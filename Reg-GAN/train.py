@@ -12,6 +12,7 @@ def get_config(config):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='Yaml/RegGan.yaml', help='Path to the config file.')
+    parser.add_argument('--run', type=str, default='evaluate', help='Training or Evaluation.')
     opts = parser.parse_args()
     config = get_config(opts.config)
     
@@ -22,8 +23,11 @@ def main():
     elif config['name'] == 'P2p':
         trainer = P2p_Trainer(config)
 
-    # trainer.train()
-    trainer.evaluate('/path/to/input/*.png', '/path/to/output')
+    if opts.run == 'train':
+        trainer.train()
+    elif opts.run == 'evaluate':
+        trainer.evaluate(config['eval_input'], config['eval_save'])
+    
 
 ###################################
 if __name__ == '__main__':

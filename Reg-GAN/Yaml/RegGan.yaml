@@ -8,12 +8,13 @@ batchSize: 8
 
 name: RegGan
 output_nc: 6
-save_root: ""
-image_save: ""
-model_save: "/paths/to/model_weights"
-eval_save: ""
-tilesdir: ""
-valdir: ""
+save_root: "/path/to/model/result/"
+image_save: "/path/to/model/result/images"
+model_save: "/path/to/model/result/model_weights"
+tilesdir: "/path/to/training/tiles"
+valdir: "/path/to/validation/tiles"
+eval_input: "/path/to/HE/tiles/*.png"
+eval_save: "/path/to/save/generated/tiles"
 
 
 port: 6006
