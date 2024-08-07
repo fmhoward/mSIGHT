@@ -5,7 +5,7 @@ from tqdm import tqdm
 import torch
 from cellpose import io, models
 
-def get_cellpose_seg(tiles_dir, model_path, out_dir, channels=['CD20', 'CD3', 'CD4', 'CD8', 'cytokeratin']):
+def get_cellpose_seg(tiles_dir, out_dir, cellpose_model_path, channels=['CD20', 'CD3', 'CD4', 'CD8', 'cytokeratin']):
     '''
     Cellpose segmentation on tile images.
     '''
@@ -16,7 +16,7 @@ def get_cellpose_seg(tiles_dir, model_path, out_dir, channels=['CD20', 'CD3', 'C
     if basename(files[0]).split('_')[0] in channels:
         files = [f for f in files if 'DAPI' in basename(f)]
 
-    model = models.CellposeModel(pretrained_model=model_path, gpu=True, device=torch.device('cuda:3'))
+    model = models.CellposeModel(pretrained_model=cellpose_model_path, gpu=True, device=torch.device('cuda:3'))
     for finpath in tqdm(files):
         foutname = basename(finpath)
         foutpath = join(out_dir, foutname)

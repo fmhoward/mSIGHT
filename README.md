@@ -78,11 +78,11 @@ python3 train.py --config Yaml/RegGan.yaml --run evaluate
 ```
 
 ### Cell Level Metrics
-To perform cell segmentation, choose a cellpose model that suits your application (see [cellpose documentation](https://cellpose.readthedocs.io/en/latest/)) and run `cell_segmentation.py` with paths to input/output directories and path to cellpose pretrained model. 
+To perform cell segmentation, choose a Cellpose model that suits your application (see [Cellpose documentation](https://cellpose.readthedocs.io/en/latest/)) and run `cell_segmentation.py` with paths to input/output directories and path to Cellpose pretrained model. 
 
 Calculate cell level density metrics for both real and generated tiles as illustrated in  `cell_classification.py`. Perform clustering on real cells and manually assign each cluster a label. Fit a classifier on the clustering results and classify cells on generated images.
 
 Calculate cell-to-cell adjacency metrics in `cell_to_cell_dist.py`.
 
 # Data Availability
-H&E and mIF image tiles used for training and validaiton can be found [here](https://zenodo.org/records/13124223).
+H&E and mIF image tiles used for training and validation can be found [here](https://zenodo.org/records/13124223).
