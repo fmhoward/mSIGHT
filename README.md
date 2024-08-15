@@ -1,7 +1,5 @@
 # mSIGHT
-Multiplex Synthetic Immunofluorescence Generated from H&amp;E Transformed Histology
-
-mSIGHT is a GAN-based deep learning pipeline that translates from Hematoxylin and Eosin (H&E) stain to Multiplex Immunofluorescence (mIF) images.
+<b>M</b>ultiplex <b>S</b>ynthetic <b>I</b>mmunofluorescence <b>G</b>enerated from <b>H</b>&amp;E <b>T</b>ransformed Histology (mSIGHT) is a GAN-based deep learning pipeline that translates from Hematoxylin and Eosin (H&E) stain to Multiplex Immunofluorescence (mIF) images.
 
 ![figure](./fig1.png)
 
